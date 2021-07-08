@@ -13,5 +13,37 @@ public class Estudiante {
     // # edadEstudiante: Entero
     protected int edadEstudiante;
     
+    public void establecerNombresEstudiante(String n){
+        nombresEstudiante = n;
+    }
+    
+    public void establecerApellidoEstudiante(String a){
+        apellidosEstudiante = a;
+    }
+    
+    public void establecerIdentificacionEstudiante(String i){
+        identificacionEstudiante = i;
+    }
+    
+    public String obtenerNombresEstudiante(){
+        return nombresEstudiante;
+    }
+    
+    public String obtenerApellidoEstudiante(){
+        return apellidosEstudiante;
+    }
+    
+    public String obtenerIdentificacionEstudiante(){
+        return identificacionEstudiante;
+    }
+    
+    @Override
+    public String toString(){
+        String cadena = String.format("Nombre Estudiante: %s %s\nCédula: %s",
+                obtenerNombresEstudiante(),
+                obtenerApellidoEstudiante(),
+                obtenerIdentificacionEstudiante());
+        return cadena;
+    }
 
 }
